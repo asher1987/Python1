@@ -1,0 +1,11 @@
+# Ask for user's name
+userName = input ("Welcome. Please enter your name")
+# Ask the user for two numbers
+userNumberOne = int(input ("Please enter your favorite number"))
+userNumberTwo = int(input ("Please choose your least favorite number"))
+print("Doing math now...")
+# Multiply the user's numbers together
+multiplication = int(userNumberOne) * int(userNumberTwo)
+# print username and results
+print("Thank you, %s" % userName)
+print("The result of", userNumberOne, "*", userNumberTwo, "equals", multiplication)
