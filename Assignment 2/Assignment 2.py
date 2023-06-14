@@ -7,15 +7,23 @@
 # in that range. i.e. If I ask to investigate the number 5, from a lower number 
 # of 8 to a higher number of 14 -->
 
-# user input for investigatedNumber
-investigatedNumber = input("We're doing math today. Please enter a number between 0 and 10. We will call this our 'investigated number': ")
 
-# checking for an integer using isdigit method
-if investigatedNumber.isdigit():
-    investigatedNumber = int(investigatedNumber)
-    print("Great, thanks!")
-else:
-    print("Please enter a number.")
+
+# user input for investigatedNumber
+investigatedNumber = input("We're doing math today. Please enter a number between 1 and 10. We will call this our 'investigated number': ")
+
+#Using a while loop to continuously prompt the user until they type 10
+# Using a while loop to continuously prompt the user until they type 10
+while investigatedNumber < "10":
+    # checking for an integer using isdigit method
+    if investigatedNumber.isdigit():
+        investigatedNumber = int(investigatedNumber)
+        print("Great, thanks!")
+        break  # Exit the loop if the number is valid
+    else:
+        print("Please enter a number.")
+        investigatedNumber = input("We're doing math today. Please enter a number between 1 and 10. We will call this our 'investigated number': ")
+
 
 # asking for the lower number
 lowerNumberOfARange = input("Please enter a number that is less than your investigated number. We will refer to this number as 'lower number': ")
@@ -41,10 +49,10 @@ print("minimum calculated range =", lowerNumberOfARange)
 print("maximum calcuated rainge =",higherNumberOfARange )
 
 # for loop to loop through the list and multiply the investigated number by each element in the list
-for rangeNumber in userRange:
-    result = investigatedNumber * rangeNumber
+for i in userRange:
+    result = investigatedNumber * i
 #print statement using f string
-    print(f"{investigatedNumber} * {rangeNumber} = {result}")
+    print(f"{investigatedNumber} * {i} = {result}")
 
 
     
