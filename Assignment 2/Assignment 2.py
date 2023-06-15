@@ -1,4 +1,4 @@
-# <!-- Write me a program that prints the times tables for a given number.
+#  Write me a program that prints the times tables for a given number.
 # You program should ask for 3 numbers:
 # Investigated number
 # Lower number of a range
@@ -12,7 +12,6 @@
 # user input for investigatedNumber
 investigatedNumber = input("We're doing math today. Please enter a number between 1 and 10. We will call this our 'investigated number': ")
 
-#Using a while loop to continuously prompt the user until they type 10
 # Using a while loop to continuously prompt the user until they type 10
 while investigatedNumber < "10":
     # checking for an integer using isdigit method
@@ -31,8 +30,14 @@ lowerNumberOfARange = input("Please enter a number that is less than your invest
 # checking for an integer using isdigit method
 if lowerNumberOfARange.isdigit():
     lowerNumberOfARange = int(lowerNumberOfARange)
-    print("Great, thanks!")
-else: print("Please enter a number. ")
+    if lowerNumberOfARange < investigatedNumber:
+        print("Great, thanks!")
+    else:
+        print("You need to enter a number that is less than your investigated number and higher than the previous number.")
+else:
+    print("You need to enter a number.")
+
+
 
 # asking for a higher number
 higherNumberOfARange = input("Please enter a number that is higher than your investigated number, but less than 10. We will refer to this number as 'higher number': ")
@@ -40,20 +45,28 @@ higherNumberOfARange = input("Please enter a number that is higher than your inv
 # checking for an integer using isdigit method
 if higherNumberOfARange.isdigit():
     higherNumberOfARange = int(higherNumberOfARange)
-    print("Great, thanks! Here comes the magic!")
+    # checking to see if the higher number is greater than the lower number
+    if higherNumberOfARange > lowerNumberOfARange: 
+        if higherNumberOfARange > investigatedNumber:
+            print("Great thanks! Here comes the magic!")
+    else:
+        print("Please enter a higher number")
+else: 
+    print("Please enter a number")
 
 # create a list of numbers to multiply by using the range function
-userRange = list(range(lowerNumberOfARange,(higherNumberOfARange + 1)))
-print(userRange)
+userRange = list(range(lowerNumberOfARange,higherNumberOfARange + 1))
+
+# print user range
 print( "investigated number =", investigatedNumber)
 print("minimum calculated range =", lowerNumberOfARange)
 print("maximum calcuated rainge =",higherNumberOfARange )
 
 # for loop to loop through the list and multiply the investigated number by each element in the list
-for i in userRange:
-   result = investigatedNumber * range +1
+for number in userRange:
+   result = investigatedNumber * range
 #print statement using f string
-print(f"{investigatedNumber} * {range} = {result}")
+print(f"{investigatedNumber} * {number} = {result}")
 
 
     
