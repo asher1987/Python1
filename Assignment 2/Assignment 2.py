@@ -32,6 +32,7 @@ lowerNumberOfARange = input("Please enter a number that is less than your invest
 if lowerNumberOfARange.isdigit():
     lowerNumberOfARange = int(lowerNumberOfARange)
     print("Great, thanks!")
+else: print("Please enter a number. ")
 
 # asking for a higher number
 higherNumberOfARange = input("Please enter a number that is higher than your investigated number, but less than 10. We will refer to this number as 'higher number': ")
@@ -42,7 +43,7 @@ if higherNumberOfARange.isdigit():
     print("Great, thanks! Here comes the magic!")
 
 # create a list of numbers to multiply by using the range function
-userRange = list(range(lowerNumberOfARange, higherNumberOfARange + 1))
+userRange = list(range(lowerNumberOfARange,(higherNumberOfARange + 1)))
 print(userRange)
 print( "investigated number =", investigatedNumber)
 print("minimum calculated range =", lowerNumberOfARange)
@@ -50,9 +51,9 @@ print("maximum calcuated rainge =",higherNumberOfARange )
 
 # for loop to loop through the list and multiply the investigated number by each element in the list
 for i in userRange:
-    result = investigatedNumber * i
+   result = investigatedNumber * range +1
 #print statement using f string
-    print(f"{investigatedNumber} * {i} = {result}")
+print(f"{investigatedNumber} * {range} = {result}")
 
 
     
