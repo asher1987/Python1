@@ -8,50 +8,36 @@
 # of 8 to a higher number of 14 -->
 
 
-
+userInputOptions = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 # user input for investigatedNumber
-investigatedNumber = input("We're doing math today. Please enter a number between 1 and 10. We will call this our 'investigated number': ")
+investigatedNumber = int(input("We're doing math today. Please enter a number between 1 and 10. We will call this our 'investigated number': "))
 
-#cast an str to an Int
-investigatedNumber = int(investigatedNumber)
 # Using a while loop to continuously prompt the user until they type 10
 while investigatedNumber < 10:
     # checking for an integer using isdigit method
-    if investigatedNumber < 10:
-       # investigatedNumber = int(investigatedNumber)
+    if investigatedNumber in userInputOptions and investigatedNumber < 10:
         print("Great, thanks!")
         break  # Exit the loop if the number is valid
     else:
         print("Please enter a number.")
-        
+      
         
 # asking for the lower number
-lowerNumberOfARange = input("Please enter a number that is less than your investigated number. We will refer to this number as 'lower number': ")
-#casting the str to an int
-lowerNumberOfARange = int(lowerNumberOfARange)
-# checking for an integer using isdigit method
-#if lowerNumberOfARange.isdigit():
-   # lowerNumberOfARange = int(lowerNumberOfARange)
-if lowerNumberOfARange < (investigatedNumber):
+lowerNumberOfARange = int(input("Please enter a number that is less than your investigated number. We will refer to this number as 'lower number': "))
+
+if lowerNumberOfARange < (investigatedNumber) and lowerNumberOfARange in userInputOptions:
     print("Great, thanks!")
 else:
     print("please enter a number less than the investigated number")
         
 
             
-
-
-
 # asking for a higher number
-higherNumberOfARange = input("Please enter a number that is higher than your investigated number, but less than 10. We will refer to this number as 'higher number': ")
+higherNumberOfARange = int(input("Please enter a number that is higher than your investigated number, but less than 10. We will refer to this number as 'higher number': "))
 #casting the str to an int
-higherNumberOfARange = int(higherNumberOfARange)
 
-# checking for an integer using isdigit method
-#if higherNumberOfARange.isdigit():
-   # higherNumberOfARange = int(higherNumberOfARange)
     # checking to see if the higher number is greater than the lower number
-if higherNumberOfARange > lowerNumberOfARange: 
+if higherNumberOfARange > lowerNumberOfARange and higherNumberOfARange in userInputOptions: 
         if higherNumberOfARange > investigatedNumber:
             print("Great thanks! Here comes the magic!")
         else:
